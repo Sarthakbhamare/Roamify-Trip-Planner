@@ -16,73 +16,72 @@ function filterDestinations() {
     const destinations = {
         "paris": {
             attractions: [
-                { name: "Eiffel Tower", description: "Visit the iconic Eiffel Tower, one of Paris' most famous landmarks.", image: "assets/eiffel-tower.jpg", },
-                
-                { name: "Louvre Museum", description: "Explore the world-renowned Louvre Museum, home to thousands of works of art.", image: "assets/louvre-museum.jpg" }
+                { name: "Eiffel Tower", description: "Visit the iconic Eiffel Tower, one of Paris' most famous landmarks.", image: "eiffel-tower.jpg" },
+                { name: "Louvre Museum", description: "Explore the world-renowned Louvre Museum, home to thousands of works of art.", image: "louvre-museum.jpg" }
             ],
             events: [
-                { name: "Paris Fashion Week", description: "The iconic fashion event that brings together top designers and influencers.", image: "assets/paris-fashion-week.jpg" },
-                { name: "Bastille Day", description: "Celebrate France's National Day with fireworks and festivities across the city.", image: "assets/bastille-day.jpg" }
+                { name: "Paris Fashion Week", description: "The iconic fashion event that brings together top designers and influencers.", image: "paris-fashion-week.jpg" },
+                { name: "Bastille Day", description: "Celebrate France's National Day with fireworks and festivities across the city.", image: "bastille-day.jpg" }
             ],
             gems: [
-                { name: "Montmartre", description: "A charming artistic district known for its bohemian atmosphere.", image: "assets/montmartre.jpg" },
-                { name: "Canal Saint-Martin", description: "A hidden gem offering peaceful walks and quaint cafes.", image: "assets/canal-saint-martin.jpg" }
+                { name: "Montmartre", description: "A charming artistic district known for its bohemian atmosphere.", image: "montmartre.jpg" },
+                { name: "Canal Saint-Martin", description: "A hidden gem offering peaceful walks and quaint cafes.", image: "canal-saint-martin.jpg" }
             ]
         },
         "kyoto": {
             attractions: [
-                { name: "Kinkaku-ji Temple", description: "Visit the Golden Pavilion, a stunning Zen Buddhist temple.", image: "assets/kinkaku-ji.jpg" },
-                { name: "Fushimi Inari Shrine", description: "Walk through the famous red torii gates at Fushimi Inari Taisha.", image: "assets/Fushinami Inari.jpg" }
+                { name: "Kinkaku-ji Temple", description: "Visit the Golden Pavilion, a stunning Zen Buddhist temple.", image: "kinkaku-ji.jpg" },
+                { name: "Fushimi Inari Shrine", description: "Walk through the famous red torii gates at Fushimi Inari Taisha.", image: "Fushinami Inari.jpg" }
             ],
             events: [
-                { name: "Kyoto Gion Matsuri", description: "A traditional festival celebrating Kyoto's rich cultural heritage.", image: "assets/gion-festival.jpg" },
-                { name: "Hanami (Cherry Blossom Viewing)", description: "Experience the beauty of cherry blossoms in full bloom.", image: "assets/hanami.jpg" }
+                { name: "Kyoto Gion Matsuri", description: "A traditional festival celebrating Kyoto's rich cultural heritage.", image: "gion-festival.jpg" },
+                { name: "Hanami (Cherry Blossom Viewing)", description: "Experience the beauty of cherry blossoms in full bloom.", image: "hanami.jpg" }
             ],
             gems: [
-                { name: "Arashiyama Bamboo Grove", description: "A serene bamboo forest offering a peaceful escape from the city.", image: "assets/arashiyama-bamboo.jpg" },
-                { name: "Kiyomizu-dera", description: "A historic temple offering stunning views of Kyoto.", image: "assets/kiyomizu-dera.jpg" }
+                { name: "Arashiyama Bamboo Grove", description: "A serene bamboo forest offering a peaceful escape from the city.", image: "arashiyama-bamboo.jpg" },
+                { name: "Kiyomizu-dera", description: "A historic temple offering stunning views of Kyoto.", image: "kiyomizu-dera.jpg" }
             ]
         },
         "new york": {
             attractions: [
-                { name: "Statue of Liberty", description: "A symbol of freedom and democracy, the Statue of Liberty is a must-visit landmark in New York.", image: "assets/statue-liberty.jpg" },
-                { name: "Central Park", description: "A vast urban park offering beautiful landscapes and outdoor activities.", image: "assets/cetral-park.jpg" }
+                { name: "Statue of Liberty", description: "A symbol of freedom and democracy, the Statue of Liberty is a must-visit landmark in New York.", image: "statue-liberty.jpg" },
+                { name: "Central Park", description: "A vast urban park offering beautiful landscapes and outdoor activities.", image: "cetral-park.jpg" }
             ],
             events: [
-                { name: "New Year's Eve Times Square Ball Drop", description: "Ring in the new year at the famous Times Square ball drop.", image: "assets/times-square.jpg" },
-                { name: "Broadway Shows", description: "Experience world-class theater performances in the heart of New York.", image: "assets/broadway.jpg" }
+                { name: "New Year's Eve Times Square Ball Drop", description: "Ring in the new year at the famous Times Square ball drop.", image: "times-square.jpg" },
+                { name: "Broadway Shows", description: "Experience world-class theater performances in the heart of New York.", image: "broadway.jpg" }
             ],
             gems: [
-                { name: "Brooklyn Bridge Park", description: "Enjoy panoramic views of Manhattan and Brooklyn from this scenic park.", image: "assets/brooklyn-bridge.jpg" },
-                { name: "High Line Park", description: "An elevated park offering greenery, art, and stunning views of the city.", image: "assets/high-line-park.jpg" }
+                { name: "Brooklyn Bridge Park", description: "Enjoy panoramic views of Manhattan and Brooklyn from this scenic park.", image: "brooklyn-bridge.jpg" },
+                { name: "High Line Park", description: "An elevated park offering greenery, art, and stunning views of the city.", image: "high-line-park.jpg" }
             ]
         },
         "london": {
             attractions: [
-                { name: "The British Museum", description: "Discover centuries of history at one of the world's greatest museums.", image: "assets/british-museum.jpg" },
-                { name: "Big Ben", description: "Visit the iconic clock tower and Parliament building in the heart of London.", image: "assets/big-ben.jpg" }
+                { name: "The British Museum", description: "Discover centuries of history at one of the world's greatest museums.", image: "british-museum.jpg" },
+                { name: "Big Ben", description: "Visit the iconic clock tower and Parliament building in the heart of London.", image: "big-ben.jpg" }
             ],
             events: [
-                { name: "Notting Hill Carnival", description: "A vibrant celebration of Caribbean culture with parades, music, and food.", image: "assets/notting-hill.jpg" },
-                { name: "London Fashion Week", description: "Showcasing the latest trends in fashion from top designers.", image: "assets/london-fashion.jpg" }
+                { name: "Notting Hill Carnival", description: "A vibrant celebration of Caribbean culture with parades, music, and food.", image: "notting-hill.jpg" },
+                { name: "London Fashion Week", description: "Showcasing the latest trends in fashion from top designers.", image: "london-fashion.jpg" }
             ],
             gems: [
-                { name: "Kew Gardens", description: "A beautiful botanical garden offering a peaceful escape from the city.", image: "assets/kew-gardens.jpg" },
-                { name: "Hampstead Heath", description: "A vast park offering stunning views of the city skyline.", image: "assets/hampstead heath.jpg" }
+                { name: "Kew Gardens", description: "A beautiful botanical garden offering a peaceful escape from the city.", image: "kew-gardens.jpg" },
+                { name: "Hampstead Heath", description: "A vast park offering stunning views of the city skyline.", image: "hampstead heath.jpg" }
             ]
         },
         "tokyo": {
             attractions: [
-                { name: "Tokyo Tower", description: "An iconic landmark offering panoramic views of the city.", image: "assets/tokyo-tower.jpg" },
-                { name: "Senso-ji Temple", description: "Japan's oldest temple, known for its beautiful architecture and cultural significance.", image: "assets/senso-ji Temple.jpg" }
+                { name: "Tokyo Tower", description: "An iconic landmark offering panoramic views of the city.", image: "tokyo-tower.jpg" },
+                { name: "Senso-ji Temple", description: "Japan's oldest temple, known for its beautiful architecture and cultural significance.", image: "senso-ji Temple.jpg" }
             ],
             events: [
-                { name: "Tokyo Cherry Blossom Festival", description: "Enjoy the stunning beauty of cherry blossoms in full bloom.", image: "assets/cherry-blossoms.jpg" },
-                { name: "Sumida River Fireworks Festival", description: "A spectacular fireworks display over the Sumida River.", image: "assets/sumida-firework.jpg" }
+                { name: "Tokyo Cherry Blossom Festival", description: "Enjoy the stunning beauty of cherry blossoms in full bloom.", image: "cherry-blossoms.jpg" },
+                { name: "Sumida River Fireworks Festival", description: "A spectacular fireworks display over the Sumida River.", image: "sumida-firework.jpg" }
             ],
             gems: [
-                { name: "Odaiba", description: "A futuristic district known for its shopping, entertainment, and waterfront views.", image: "assets/odaiba.jpg" },
-                { name: "Meiji Shrine", description: "A tranquil Shinto shrine surrounded by lush greenery.", image: "assets/meiji-shrine.jpg" }
+                { name: "Odaiba", description: "A futuristic district known for its shopping, entertainment, and waterfront views.", image: "odaiba.jpg" },
+                { name: "Meiji Shrine", description: "A tranquil Shinto shrine surrounded by lush greenery.", image: "meiji-shrine.jpg" }
             ]
         }
     };
