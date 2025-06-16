@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('assets/travel img 5.jpg'); /* Replace with your image file */
+    background-image: url('travel img 5.jpg'); /* Replace with your image file */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
