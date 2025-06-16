@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripVault</title>
+    <link rel="stylesheet" href="tripvault.css">
+</head>
+<body>
+    <header>
+        <h1>Roamify:TripVault</h1>
+        
+        <nav class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="plantrip.html">Plan My Trip</a>
+            <a href="explore.html">Explorepedia</a>
+            <a href="tripvault.html">TripVault</a>
+            <a href="notify.html">Notifications</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="booking-system">
+            <h2>Centralized Booking System</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="transport">Select Transportation:</label>
+                    <select id="transport" name="transport">
+                        <option value="flight">Flight</option>
+                        <option value="train">Train</option>
+                        <option value="bus">Bus</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">From:</label>
+                    <input type="text" id="location" name="location" placeholder="Enter your starting location">
+                </div>
+
+                <div class="form-group">
+                    <label for="destination">To:</label>
+                    <input type="text" id="destination" name="destination" placeholder="Enter your destination">
+                </div>
+
+                <button type="button" id="search-transport">Search Transport</button>
+
+                <div id="transport-results"></div>
+            </form>
+        </section>
+
+        <section class="accommodation-system">
+            <h2>Book Accommodation</h2>
+            <form id="accommodation-form">
+                <div class="form-group">
+                    <label for="accommodation">Select Type:</label>
+                    <select id="accommodation" name="accommodation">
+                        <option value="resort">Resort</option>
+                        <option value="hotel">Hotel</option>
+                        <option value="homestay">Homestay</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="accommodation-location">Preferred Location:</label>
+                    <input type="text" id="accommodation-location" name="accommodation-location" placeholder="Enter location">
+                </div>
+
+                <button type="button" id="search-accommodation">Search Accommodation</button>
+
+                <div id="accommodation-results"></div>
+            </form>
+        </section>
+
+        <section class="extras">
+            <h2>Extra Benefits</h2>
+            <ul>
+                <li>Group Discount Options</li>
+                <li>Flexible Payment Methods</li>
+                <li>Automatic Updates to Synchronize Bookings with Your Itinerary</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="tripvault.js"></script>
+</body>
+</html>

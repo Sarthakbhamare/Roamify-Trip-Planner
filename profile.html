@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+         body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('assets/travel img 5.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(0, 226, 251);
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    header .nav-links {
+    display: flex;
+    gap: 1em;
+    position: relative;
+    }
+    
+    header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding: 0.5em 1em;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease-in-out;
+    }
+    
+    header a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start the box off-screen */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #78124d, #642581, #bc129a);
+    z-index: -1; /* Place behind the text */
+    transition: all 0.4s ease-in-out;
+    }
+    
+    header a:hover::before {
+    left: 0; /* Slide the box in on hover */
+    transition: all 0.4s ease-in-out;
+    }
+    
+    header a:hover {
+    color: #ffffff; /* Ensure text remains visible */
+    }
+    
+    h2 {
+    color: #fdfdfd; /* Replace with your desired color code */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Optional: add a shadow for better visibility */
+    }
+
+       /* General styles for profile container */
+.profile-container {
+    position: relative; /* Keeps it positioned relative to the header */
+    margin: 20px auto; /* Adds space under the header and centers horizontally */
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 80%; /* Responsive width */
+    max-width: 800px; /* Limits maximum width */
+    padding: 30px; /* Adds internal spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+/* Spacing from the header */
+header + .profile-container {
+    margin-top: 100px; /* Ensures space between header and container */
+}
+
+/* Header styles */
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-header img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.profile-header h1 {
+    font-size: 28px;
+    color: #333;
+    margin: 0;
+}
+
+.profile-header p {
+    font-size: 18px;
+    color: #777;
+    margin: 5px 0;
+}
+
+/* Info container styles */
+.info-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.info-item .label {
+    font-weight: bold;
+    color: #333;
+}
+
+.info-item .value {
+    color: #555;
+}
+
+/* Vault container styles */
+.vault-container {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff4081;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.vault-header {
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.coupon {
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.coupon .discount {
+    font-weight: bold;
+    color: #ff5722;
+}
+
+.coupon .expiry {
+    font-size: 14px;
+    color: #777;
+}
+
+.vault-container .coupon:last-child {
+    margin-bottom: 0;
+}
+
+button {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e0336d;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Roamify:Profile</h1>
+        
+        <nav class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="plantrip.html">Plan My Trip</a>
+            <a href="explore.html">Explorepedia</a>
+            <a href="tripvault.html">TripVault</a>
+            <a href="notify.html">Notifications</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </header>
+
+<div class="profile-container">
+    <div class="profile-header">
+        <img src="assets/profile.png" alt="User Profile Pic">
+        <h1>Sarthak Bhamare</h1>
+        <p>Age: 20</p>
+        <p>Email: srb@example.com</p>
+        <p>Mobile: 9209132697</p>
+    </div>
+
+    <div class="info-container">
+        <div class="info-item">
+            <span class="label">Username:</span>
+            <span class="value">Sarthak Bhamare</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Age:</span>
+            <span class="value">20</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Email:</span>
+            <span class="value">srb@example.com</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Mobile:</span>
+            <span class="value">9209132697</span>
+        </div>
+    </div>
+
+    <div class="vault-container">
+        <div class="vault-header">
+            <p>Your Vault (Coupons & Discounts)</p>
+        </div>
+
+        <div class="coupon">
+            <span class="discount">20% OFF</span>
+            <span class="expiry">Expires in 7 days</span>
+        </div>
+        <div class="coupon">
+            <span class="discount">10% OFF</span>
+            <span class="expiry">Expires in 14 days</span>
+        </div>
+        <div class="coupon">
+            <span class="discount">Free Delivery</span>
+            <span class="expiry">Expires in 5 days</span>
+        </div>
+
+        <button>Claim New Coupon</button>
+    </div>
+</div>
+
+<script>
+    // This is just to simulate the "Claim New Coupon" button working
+    const claimButton = document.querySelector("button");
+    claimButton.addEventListener("click", () => {
+        alert("New Coupon Claimed! Enjoy your discount!");
+    });
+</script>
+
+</body>
+</html>

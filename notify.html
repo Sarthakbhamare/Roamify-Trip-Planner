@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventurous Notifications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('assets/travel img 5.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: rgb(0, 226, 251);
+            padding: 0.5em 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        header .nav-links {
+            display: flex;
+            gap: 1em;
+        }
+        
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5em 1em;
+            position: relative;
+            overflow: hidden;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        header a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #78124d, #642581, #bc129a);
+            transition: all 0.4s ease-in-out;
+        }
+        
+        header a:hover::before {
+            left: 0;
+        }
+        
+        header a:hover {
+            color: #ffffff;
+        }
+        
+        .notification-container {
+            position: fixed;
+            top: 80px; /* Adjusted to be below the navbar */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1001;
+        }
+    
+        .notification {
+            background: linear-gradient(45deg, #ff4081, #ff9800);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(-20px); /* Adjusted for the top */
+            transition: transform 0.5s, opacity 0.5s;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    
+        .notification .time {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Roamify:TripVault</h1>
+        
+        <nav class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="plantrip.html">Plan My Trip</a>
+            <a href="explore.html">Explorepedia</a>
+            <a href="tripvault.html">TripVault</a>
+            <a href="notify.html">Notifications</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </header>
+    <div class="notification-container" id="notificationContainer"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const notificationsData = [
+                "You have arrived at your destination!",
+                "Weather is sunny, you can go for an adventure now!",
+                "Tasty pizza nearby at 10% discount!",
+                "New event: Beach party this weekend!",
+                "Special offer on coffee – 50% off till 5 PM!",
+                "Congrats! You’ve earned 100 loyalty points today.",
+                "Reminder: Your package is arriving tomorrow!",
+                "Your favorite show just started. Don’t miss it!",
+                "Reminder: Your gym session starts in 30 minutes!",
+                "Your order is out for delivery. Track it now!",
+                "Flash sale: 60% off on all electronics today!",
+                "Exclusive offer for members: Free shipping on all orders!",
+                "Reminder: Meeting at 3 PM today. Don’t be late!",
+                "We’ve found a new restaurant for you to try nearby!",
+                "It’s a great day to explore the city, enjoy!"
+            ];
+    
+            function getCurrentTime() {
+                const now = new Date();
+                return now.toLocaleTimeString();
+            }
+    
+            function showNotifications() {
+                let delay = 0;
+                notificationsData.forEach((message) => {
+                    setTimeout(() => {
+                        const notification = document.createElement('div');
+                        notification.classList.add('notification');
+                        notification.innerHTML = `
+                            <div class="message">${message}</div>
+                            <div class="time">${getCurrentTime()}</div>
+                        `;
+                        document.getElementById('notificationContainer').appendChild(notification);
+                        
+                        setTimeout(() => notification.classList.add('show'), 10);
+                        
+                        setTimeout(() => {
+                            notification.classList.remove('show');
+                            setTimeout(() => notification.remove(), 500);
+                        }, 5000); // Notification display duration
+                    }, delay);
+                    delay += 3000; // Delay for each subsequent notification
+                });
+            }
+    
+            window.onload = showNotifications;
+        });
+    </script>
+</body>
+</html>

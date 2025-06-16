@@ -1,0 +1,115 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('assets/travel img 5.jpg'); /* Replace with your image file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(0, 226, 251);
+    padding: 1em 2em; /* Increased padding for a better look */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header .nav-links {
+    display: flex;
+    gap: 1em;
+    position: relative;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding: 0.5em 1em;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease-in-out;
+}
+
+header a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start the box off-screen */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #78124d, #642581, #bc129a);
+    z-index: -1; /* Place behind the text */
+    transition: all 0.4s ease-in-out;
+}
+
+header a:hover::before {
+    left: 0; /* Slide the box in on hover */
+    transition: all 0.4s ease-in-out;
+}
+
+header a:hover {
+    color: #ffffff; /* Ensure text remains visible */
+}
+
+/* Main Content */
+main {
+    padding: 120px 20px; /* Add top padding to avoid overlap with fixed header */
+}
+
+.section {
+    margin: 60px auto; /* Adjusted margin for spacing */
+    width: 90%; /* Increased width for larger sections */
+    max-width: 800px; /* Increased max-width for a bigger section */
+    background: rgba(2, 14, 202, 0.25); /* Frosted glass effect */
+    backdrop-filter: blur(20px);
+    padding: 40px; /* Increased padding */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+    color: #ffffff;
+    margin: 0 0 20px; /* Increased bottom margin for spacing */
+}
+
+.section button {
+    padding: 15px 30px; /* Adjusted button padding */
+    font-size: 1.1rem; /* Slightly larger font size */
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}

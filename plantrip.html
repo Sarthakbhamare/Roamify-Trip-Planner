@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan My Trip</title>
+  <link rel="stylesheet" href="plantrip.css">
+</head>
+<body>
+  <header>
+    <h1>Roamify</h1>
+    <nav>
+      <ul class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="plantrip.html">Plan My Trip</a>
+        <a href="explore.html">Explorepedia</a>
+        <a href="tripvault.html">TripVault</a>
+        <a href="notify.html">Notifications</a>
+        <a href="profile.html">Profile</a>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="plan-trip">
+      <h2>Create Your Trip</h2>
+      <form id="trip-form">
+        <label for="destination">Destination:</label>
+        <select id="destination">
+          <option value="" disabled selected>Select Destination</option>
+          <option value="paris">Paris</option>
+          <option value="new-york">New York</option>
+          <option value="tokyo">Tokyo</option>
+        </select>
+
+        <label for="activity">Activity:</label>
+        <select id="activity">
+          <option value="" disabled selected>Select Activity</option>
+          <option value="sightseeing">Sightseeing</option>
+          <option value="adventure">Adventure</option>
+          <option value="relaxation">Relaxation</option>
+        </select>
+
+        <label for="transport">Transport:</label>
+        <select id="transport">
+          <option value="" disabled selected>Select Transport</option>
+          <option value="flight">Flight</option>
+          <option value="train">Train</option>
+          <option value="car">Car</option>
+        </select>
+
+        <label for="accommodation">Accommodation:</label>
+        <select id="accommodation">
+          <option value="" disabled selected>Select Accommodation</option>
+          <option value="hotel">Hotel</option>
+          <option value="hostel">Hostel</option>
+          <option value="bnb">BnB</option>
+        </select>
+
+        <button id="add-itinerary">Add to Itinerary</button>
+        <ul id="itinerary-list"></ul>
+
+      </form>
+
+      <div id="itinerary-container">
+        <h3>Your Itinerary</h3>
+        <ul id="itinerary-list"></ul>
+      </div>
+
+      <button id="group-collab-btn">Group Collaboration</button>
+    </section>
+
+    <section id="group-collab-modal" class="hidden">
+      <div class="modal-content">
+        <h3>Collaborate with Friends</h3>
+        <label for="friend-search">Search or Add Friend:</label>
+        <input type="text" id="friend-search" placeholder="Type a friend's name">
+        <button id="select-friend">Add Friend</button>
+        <button id="close-modal">Close</button>
+      </div>
+    </section>
+
+    <section id="chat-section" class="hidden">
+      <h3>Group Chat</h3>
+      <div id="chat-box"></div>
+      <input type="text" id="chat-input" placeholder="Type a message">
+      <button id="send-chat">Send</button>
+    </section>
+
+  <script src="plantrip.js"></script>
+</body>
+</html>
+

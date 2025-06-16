@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('assets/travel img 5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(0, 226, 251);
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header .nav-links {
+    display: flex;
+    gap: 1em;
+    position: relative;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding: 0.5em 1em;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease-in-out;
+}
+
+header a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #78124d, #642581, #bc129a);
+    z-index: -1;
+    transition: all 0.4s ease-in-out;
+}
+
+header a:hover::before {
+    left: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+header a:hover {
+    color: #ffffff;
+}
+
+/* Search Section */
+.search-section {
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container {
+    padding: 50px;
+    background: rgba(2, 14, 202, 0.3);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 1em;
+    text-align: center;
+}
+
+.search-container h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.search-section input {
+    padding: 15px;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    width: 70%;
+    max-width: 500px;
+    border-radius: 30px;
+    border: none;
+    background: rgba(242, 242, 242, 0.8);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-section button {
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-section button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+#dining-info, #transport-info {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+.dining-item {
+    background: rgba(2, 14, 202, 0.3);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    margin: 20px;
+    padding: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+}
+
+.dining-item img {
+    max-width: 150px;
+    border-radius: 5px;
+    margin-right: 30px;
+}
+
+.dining-item div {
+    flex: 1;
+}
+
+h4 {
+    margin-top: 0;
+}
+
+.rating {
+    color: #000000;
+    font-weight: bold;
+}
+
+.reviews {
+    font-size: 1em;
+    color: #000000;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+h5 {
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+#default-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#transport-info {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#transport-info ul {
+    width: 100%;
+    max-width: 800px;
+    list-style-type: none;
+    padding: 0;
+}
+
+#transport-info li {
+    background-color: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 5px 5px;
+    font-size: 1.2rem;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+@media (max-width: 768px) {
+    .feature,
+    .trending-destination {
+        flex: 1 1 calc(50% - 1em);
+    }
+}
+
+@media (max-width: 480px) {
+    .feature,
+    .trending-destination {
+        flex: 1 1 100%;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+}

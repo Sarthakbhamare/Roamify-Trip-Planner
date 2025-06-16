@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('assets/travel img 5.jpg'); /* Replace with your image file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 1000;
+background-color: rgba(0, 0, 0, 0.8);
+color: rgb(0, 226, 251);
+padding: 0.5em 1em;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header .nav-links {
+display: flex;
+gap: 1em;
+position: relative;
+}
+
+header a {
+color: #ffffff;
+text-decoration: none;
+font-weight: bold;
+position: relative;
+display: inline-block;
+padding: 0.5em 1em;
+overflow: hidden;
+z-index: 1;
+transition: color 0.3s ease-in-out;
+}
+
+header a::before {
+content: "";
+position: absolute;
+top: 0;
+left: -100%; /* Start the box off-screen */
+width: 100%;
+height: 100%;
+background: linear-gradient(45deg, #78124d, #642581, #bc129a);
+z-index: -1; /* Place behind the text */
+transition: all 0.4s ease-in-out;
+}
+
+header a:hover::before {
+left: 0; /* Slide the box in on hover */
+transition: all 0.4s ease-in-out;
+}
+
+header a:hover {
+color: #ffffff; /* Ensure text remains visible */
+}
+
+h2 {
+color: #fdfdfd; /* Replace with your desired color code */
+text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Optional: add a shadow for better visibility */
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5em 1em 1em; /* Adjust for fixed navbar */
+}
+
+/* Updated Search Bar */
+.search-bar {
+position: relative; /* Ensure it stays below the header */
+display: flex;
+justify-content: center;  
+margin-top: 3em; /* Adds space between the navbar and the search bar */
+}
+
+.search-bar input {
+width: 90%;
+max-width: 600px;
+padding: 0.75em 1em; /* Add padding for better look */
+font-size: 1.1em; /* Slightly larger font for readability */
+border: 1px solid #ccc; /* Light border */
+border-radius: 25px; /* Fully rounded edges */
+background: #fff; /* Solid background */
+box-shadow: none; /* Remove shadow */
+transition: all 0.3s ease-in-out; /* Smooth transitions */
+color: #333; /* Text color */
+}
+
+.search-bar input::placeholder {
+color: rgba(100, 100, 100, 0.7); /* Placeholder color */
+font-style: italic; /* Style placeholder text */
+}
+
+.search-bar input:focus {
+outline: none; /* Remove focus outline */
+background: #f9f9f9; /* Slightly lighter background on focus */
+border: 1px solid #aaa; /* Highlight border */
+}
+
+.search-bar button {
+padding: 0.75em 1.5em; /* Add padding for button size */
+font-size: 1em; /* Button text size */
+border: none; /* Remove default border */
+border-radius: 25px; /* Fully rounded edges */
+background: linear-gradient(45deg, #6a11cb, #2575fc); /* Attractive gradient */
+color: white; /* Button text color */
+margin-left: 1em; /* Space between input and button */
+cursor: pointer; /* Pointer cursor for better UX */
+transition: all 0.3s ease-in-out; /* Smooth transitions */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.search-bar button:hover {
+background: linear-gradient(45deg, #2575fc, #6a11cb); /* Reverse gradient on hover */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Highlight shadow */
+}
+.feature-buttons,
+.trending-destinations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-between;
+}
+
+.feature,
+.trending-destination {
+    position: relative;
+    overflow: hidden; /* Ensure content stays within bounds */
+    background: rgba(4, 62, 254, 0.2); /* Semi-transparent white */
+    border: 1.5px solid rgba(255, 255, 255, 0.3); /* Light border */
+    backdrop-filter: blur(30px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(20px); /* Safari support */
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 calc(33% - 1em); /* Responsive width */
+}
+
+.feature img,
+.trending-destination img {
+    width: 100%;
+    border-radius: 10px;
+    height: 150px;
+    object-fit: cover;
+    transition: filter 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.feature:hover,
+.trending-destination:hover {
+    transform: scale(1.05); /* Only scale the container */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent footer background */
+    color: white;
+    margin-top: 2em;
+}
+
+@media (max-width: 768px) {
+    .feature,
+    .trending-destination {
+        flex: 1 1 calc(50% - 1em);
+    }
+}
+
+@media (max-width: 480px) {
+    .feature,
+    .trending-destination {
+        flex: 1 1 100%;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+}

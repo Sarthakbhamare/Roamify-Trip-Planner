@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Guides</title>
+    <link rel="stylesheet" href="destination-guide.css">
+</head>
+<body>
+    <header class="header">
+        <h1> Roamify:Destination Guides</h1>
+            <nav class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="plantrip.html">Plan My Trip</a>
+                <a href="explore.html">Explorepedia</a>
+                <a href="tripvault.html">TripVault</a>
+                <a href="notify.html">Notifications</a>
+                <a href="profile.html">Profile</a>
+            </nav>
+        </header>
+       
+
+    <!-- Search Bar -->
+    <section class="search-section">
+        <div class="search-container">
+        <label for="location-search">Enter Country or Locality:</label>
+        <input type="text" id="location-search" placeholder="Enter a country or locality">
+        <button onclick="filterDestinations()">Search</button>
+    </div>
+    </section>
+
+    <main id="content">
+        <!-- Default Tagline -->
+        <section class="section" id="default-content">
+            <h2>Where will your next adventure take you?</h2>
+            <p>Explore new destinations, uncover hidden gems, and immerse yourself in unique experiences. Enter a country or locality to start discovering!</p>
+        </section>
+
+        <!-- Sections to be populated after search -->
+        <section class="section" id="destination-content" style="display: none;">
+            <h2>Must-Visit Attractions</h2>
+            <div id="attractions"></div>
+            
+            <h2>Local Events</h2>
+            <div id="events"></div>
+            
+            <h2>Hidden Gems</h2>
+            <div id="gems"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Roamify. All Rights Reserved.</p>
+    </footer>
+
+    <script src="destination-guide.js"></script>
+</body>
+</html>
